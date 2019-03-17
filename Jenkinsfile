@@ -1,6 +1,9 @@
 pipeline {
 	agent any
-  stages {
+	tools {
+		maven 'maven3.6.0'
+		jdk 'java'
+  	stages {
 		stage('One') {
 			steps {
 				sh 'mvn clean'
